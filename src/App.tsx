@@ -34,12 +34,24 @@ function App() {
 
   return (
       <div className="container" onWheel={handleScroll}>
+        <div className="nav-container">
+          <div className="nav-left">
+            <div className="nav-logo"/>
+          </div>
+          <div className="nav-right">
+            <div className="nav-link">Menu</div>
+            <div className="nav-link">Blog</div>
+            <div className="nav-link">Contact</div>
+            <div className="order-btn">ORDER NOW</div>
+          </div>
+          </div>
+
           {sections.map((text, index) => (
-              <div
-                  key={index}
-                  ref={(el) => (sectionRefs.current[index] = el!)}
-                  className="section"
-              >
+            <div
+            key={index}
+            ref={(el) => (sectionRefs.current[index] = el!)}
+            className="section"
+            >
                   {text}
               </div>
           ))}
