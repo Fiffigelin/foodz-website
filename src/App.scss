@@ -1,0 +1,25 @@
+#root {
+  overflow: hidden;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  
+  .container {
+    width: 100%;
+    .section {
+      height: 85vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      transition: transform 2s ease-in-out;
+    }
+    .section:nth-child(0) { background: #FF6B6B; }
+    .section:nth-child(1) { background: #54A0FF; }
+    .section:nth-child(2) { background: #1DD1A1; }
+    .section:nth-child(3) { background: #FDCB6E; }
+    .section:nth-child(4) { background: #A29BFE; }
+  }
+}
+
