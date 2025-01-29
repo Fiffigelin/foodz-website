@@ -1,35 +1,52 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useRef, useCallback } from 'react';
+import './App.scss'
+
+const sections = ["Sektion 1", "Sektion 2", "Sektion 3", "Sektion 4", "Sektion 5"];
 
 function App() {
-  const [count, setCount] = useState(0)
+  const sectionRefs = useRef<HTMLDivElement[]>([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleScroll = useCallback((event: React.WheelEvent) => {
+    event.preventDefault();
+
+    /*<<< Adjust sensitivity and threshold for scrolling */
+    const sensitivityUp = 0.05;
+    const sensitivityDown = 0.04;
+    const sensitivity = event.deltaY > 0 ? sensitivityDown : sensitivityUp;
+    const threshold = 1;
+    let newIndex = currentIndex;
+
+    const adjustedDeltaY = Math.abs(event.deltaY) * sensitivity;
+
+    if (adjustedDeltaY > threshold) {
+      if (event.deltaY > 0) {
+        newIndex = Math.min(currentIndex + 1, sections.length - 1);
+      } else {
+        newIndex = Math.max(currentIndex - 1, 0);
+      }
+    }
+
+    sectionRefs.current[newIndex]?.scrollIntoView({ behavior: "smooth" });
+    setCurrentIndex(newIndex);
+  }, [currentIndex]);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="container" onWheel={handleScroll}>
+          {sections.map((text, index) => (
+              <div
+                  key={index}
+                  ref={(el) => (sectionRefs.current[index] = el!)}
+                  className="section"
+              >
+                  {text}
+              </div>
+          ))}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+  );
 }
 
 export default App
+
+
