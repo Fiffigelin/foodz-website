@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Alice&display=swap");
+
+$title-font: "Alice", sans-serif;
+$text-font: "Poppins", sans-serif;
+
+$primary-color-green: #04b90b;
+$light-color-green: #ddf3d8;
+$background-color-white: #fcfcfd;
+$background-color-grey: #f4f5f6;
+$background-color-light-grey: #e6e8ec;
+$text-color-black: #23262f;
+$text-color-grey: #777e90;
+$text-color-white: #fcfcfd;
+
+$space-small: 4px;
+$space-medium: 8px;
+$space-large: 12px;
+$space-xl: 20px;
+$space-xxl: 30px;
+$space-xxxl: 50px;
+
+$font-hero: 3.5rem;
+$font-h1: 3.5rem;
+$font-h2: 3.5rem;
+$font-h3: 3.5rem;
+$font-h4: 3.5rem;
+$font-28: 28px;
+$font-24: 24px;
+$font-20: 20px;
+$font-18: 18px;
+$font-16: 16px;
+$font-14: 14px;
+$font-12: 12px;
+
+h1 {
+	font-size: $font-h1;
+	font-family: $title-font;
+	color: $text-color-black;
+	margin: $space-large 0;
+}
+
+p {
+	font-size: $font-24;
+	font-family: $text-font;
+	color: $text-color-grey;
+	margin: $space-large 0;
+}
