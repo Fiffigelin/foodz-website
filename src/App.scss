@@ -1,3 +1,5 @@
+@use "./styles/global.scss" as global;
+
 #root {
 	overflow: hidden;
 	display: block;
@@ -11,14 +13,15 @@
 			width: 100%;
 			height: 10%;
 			display: flex;
+			background-color: global.$background-color-white;
 			justify-content: space-between;
 			position: absolute;
-			padding: 8px 0;
+			padding: global.$space-medium 0;
 			z-index: 9999;
 
 			.nav-left {
-				margin: 4px 8px;
-				margin-left: 50px;
+				margin: global.$space-small global.$space-medium;
+				margin-left: global.$space-great;
 				display: flex;
 				align-self: center;
 				.nav-logo {
@@ -29,19 +32,18 @@
 			}
 
 			.nav-right {
-				margin: 4px 8px;
-				margin-right: 50px;
+				margin: global.$space-small global.$space-great;
 				display: flex;
 				flex-direction: row;
 				justify-content: space-between;
 				align-items: center;
-				gap: 20px;
+				gap: global.$space-xl;
 				.nav-link {
 					cursor: pointer;
-					margin: 4px;
-					color: gray;
-					font-family: monospace;
-					font-size: large;
+					margin: global.$space-small;
+					color: global.$text-color-grey;
+					font-family: global.$text-font;
+					font-size: global.$font-18;
 				}
 			}
 		}
@@ -50,7 +52,6 @@
 			width: 100%;
 			display: flex;
 			flex-direction: column;
-			// align-items: center;
 			justify-content: space-between;
 			font-size: 2rem;
 			transition: transform 2s ease-in-out;

@@ -1,4 +1,5 @@
-/* Hero-sektion */
+@use "../../../styles/global.scss" as global;
+
 .hero {
 	display: flex;
 	margin-top: 130px;
@@ -7,69 +8,68 @@
 		max-width: 60%;
 		display: flex;
 		flex-direction: column;
-		margin-left: 50px;
-		gap: 5rem;
+		margin-left: global.$space-great;
+		gap: 5rem; //80px
 		.left-container-upper {
 			.hero-text {
-				margin: 8px 0;
+				margin: global.$space-medium 0;
 				h1 {
-					color: black;
-					font-size: 3.5rem;
-					font-weight: bold;
-					margin: 12px 0;
-					font-family: monospace;
+					color: global.$text-color-black;
+					font-size: global.$font-h1;
+					margin: global.$space-medium 0;
+					font-family: global.$title-font;
 				}
 				p {
 					width: 75%;
-					margin: 12px 0;
-					color: gray;
-					font-size: x-large;
-					font-family: monospace;
+					margin: global.$space-medium 0;
+					color: global.$text-color-grey;
+					font-size: global.$font-20;
+					font-family: global.$text-font;
 				}
 			}
 			.order-menu {
 				display: flex;
 				flex-direction: row;
-				gap: 20px;
+				gap: global.$space-xxl;
 				align-items: center;
 
 				> a {
-					font-size: large;
-					color: #04b90b;
-					font-family: monospace;
+					font-size: global.$font-16;
+					color: global.$primary-color-green;
+					font-family: global.$text-font;
 				}
 			}
 		}
 		.left-container-bottom {
 			display: flex;
 			.stats-container {
-				background-color: #f4f5f6;
+				background-color: global.$background-color-grey;
 				display: flex;
 				justify-content: center;
 				max-width: max-content;
 				min-width: min-content;
-				padding: 14px;
+				padding: global.$space-large;
 				border-radius: 16px;
-				gap: 20px;
-				color: #777e90;
+				gap: global.$space-xxl;
+				color: global.$text-color-grey;
 				.stats-left,
 				.stats-right {
 					width: 150px;
 					> h4 {
 						margin: 0;
-						font-family: monospace;
+						font-family: global.$text-font;
 						text-align: center;
 					}
 					> p {
 						text-align: center;
-						font-size: medium;
-						font-family: monospace;
+						font-size: global.$font-16;
+						font-family: global.$text-font;
 						margin: 0;
 					}
 				}
 				.space-divider {
-					border-right: 2px solid #e6e8ec;
-					margin: 12px 0;
+					border-right: 2px solid global.$background-color-light-grey;
+					margin: global.$space-xl 0;
 				}
 			}
 		}
@@ -88,7 +88,7 @@
 			float: inline-end;
 			bottom: 0;
 			.green-background {
-				background-color: #d3f9d5;
+				background-color: global.$light-color-green;
 				width: 500px;
 				height: 500px;
 				border-radius: 100% 0 0 0;
