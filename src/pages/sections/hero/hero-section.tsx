@@ -36,20 +36,11 @@ const HeroSection = () => {
 					</div>
 				</div>
 				<div className="hero-right">
-					<div className="green-container">
-						<div className="green-background"></div>
-						<img className="main-img" src="public\hero-ramen.png" alt="Food Bowl" />
-					</div>
+					<div className="green-background"></div>
+					<img className="main-img" src="\hero-ramen.png" alt="Food Bowl" />
 				</div>
 			</section>
 		</Fragment>
 	);
 };
 export default HeroSection;
-<section className="hero">
-	// <div className="left">Left</div>
-	// <div className="right">Right</div>
-	//{" "}
-	{/* <img src="../../public\view-ready-eat-delicious-meal-go.png" alt="hero" style={{objectFit: "cover"}}/> */}
-	//{" "}
-</section>;
