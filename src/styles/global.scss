@@ -3,6 +3,12 @@
 $title-font: "Alice", sans-serif;
 $text-font: "Poppins", sans-serif;
 
+$dimensions-small-mobile: 320px;
+$dimensions-mobile: 480px;
+$dimensions-tablet: 768px;
+$dimensions-laptop: 1024px;
+$dimensions-desktop: 1440px;
+
 $primary-color-green: #04b90b;
 $light-color-green: #ddf3d8;
 $background-color-white: #fcfcfd;
@@ -17,14 +23,16 @@ $space-medium: 8px;
 $space-large: 12px;
 $space-xl: 16px;
 $space-xxl: 20px;
-$space-xxxl: 30px;
-$space-great: 50px;
+$space-40: 40px;
+$space-50: 50px;
+$space-60: 60px;
+$space-great: 100px;
 
-$font-hero: 3.5rem;
+$font-hero: 72px;
 $font-h1: 3.5rem;
 $font-h2: 3.5rem;
 $font-h3: 3.5rem;
-$font-h4: 3.5rem;
+$font-h4: 32px;
 $font-28: 28px;
 $font-24: 24px;
 $font-20: 20px;
