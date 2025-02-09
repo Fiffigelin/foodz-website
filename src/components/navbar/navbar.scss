@@ -1,46 +1,92 @@
 @use "../../styles/global.scss" as global;
 
 .nav-container {
-	position: relative;
-	height: 10%;
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	grid-template-rows: auto auto;
+	align-items: center;
+	padding: global.$space-medium;
 	background-color: global.$background-color-white;
+	margin: global.$space-small global.$space-xxl;
+	position: relative;
+}
 
-	.nav-left {
-		padding: global.$space-medium;
-		margin: global.$space-small global.$space-xxl;
+.nav-left {
+	.nav-logo {
 		display: flex;
-		align-items: center;
-		flex-direction: row;
-		justify-content: space-between;
-		.nav-logo {
-			display: flex;
-			width: global.$space-great;
-			justify-self: center;
-		}
+		width: global.$space-great;
+	}
+}
+
+.nav-right {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+
+	.hamburger-container {
+		grid-row: 1;
+		justify-self: end;
+	}
+}
+
+.nav-links-container {
+	grid-row: 2;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: global.$background-color-white;
+	width: 100%;
+	position: absolute;
+	top: 100%;
+
+	.nav-link {
+		font-family: global.$text-font;
+		color: global.$text-color-grey;
+		font-size: global.$font-18;
 	}
 
-	.nav-right {
+	.order-btn {
 		display: none;
 	}
+}
 
-	.nav-links-container {
-		width: 100%;
-		position: absolute;
+@media screen and (min-width: global.$dimensions-tablet) and (max-width: global.$dimensions-laptop) {
+	.nav-container {
 		display: flex;
-		justify-content: center;
-		background-color: global.$background-color-white;
-
-		ul,
-		&.nav-links {
+		flex-direction: row;
+		justify-content: space-between;
+		margin: global.$space-small global.$space-60;
+		.nav-left {
+			padding: global.$space-medium;
+			margin: global.$space-small global.$space-xxl;
 			display: flex;
-			flex-direction: column;
+			align-items: center;
+			flex-direction: row;
 			justify-content: space-between;
-			padding: 0;
-			> li a {
+			.nav-logo {
+				display: flex;
+				width: global.$space-great;
+				justify-self: center;
+			}
+		}
+
+		.nav-right {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			gap: global.$space-medium;
+			.nav-link {
+				cursor: pointer;
+				margin: global.$space-small;
 				color: global.$text-color-grey;
 				font-family: global.$text-font;
 				font-size: global.$font-18;
 			}
+		}
+		.hamburger-container,
+		.nav-links-container {
+			display: none;
 		}
 	}
 }
