@@ -7,19 +7,17 @@ const HeroSection = () => {
 		<Fragment>
 			<section className="hero">
 				<div className="hero-left">
-					<div className="left-container-upper">
-						<div className="hero-text">
-							<h1>You've Got Questions.</h1>
-							<h1>You've Got Taste.</h1>
-							<p>
-								Explore your Taste with special food in the special place. This text
-								don't have any meaning
-							</p>
-						</div>
-						<div className="order-menu">
-							<OrderNowButton />
-							<a href="#menu">Explore Menu</a>
-						</div>
+					<div className="hero-text">
+						<h1>You've Got Questions.</h1>
+						<h1>You've Got Taste.</h1>
+						<p>
+							Explore your Taste with special food in the special place. This text
+							don't have any meaning
+						</p>
+					</div>
+					<div className="order-menu">
+						<OrderNowButton />
+						<a href="#menu">Explore Menu</a>
 					</div>
 					<div className="left-container-bottom">
 						<div className="stats-container">
@@ -36,8 +34,8 @@ const HeroSection = () => {
 					</div>
 				</div>
 				<div className="hero-right">
-					<div className="green-background"></div>
 					<img className="main-img" src="\hero-ramen.png" alt="Food Bowl" />
+					<div className="green-background"></div>
 				</div>
 			</section>
 		</Fragment>

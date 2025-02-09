@@ -1,0 +1,46 @@
+@use "../../styles/global.scss" as global;
+
+.nav-container {
+	position: relative;
+	height: 10%;
+	background-color: global.$background-color-white;
+
+	.nav-left {
+		padding: global.$space-medium;
+		margin: global.$space-small global.$space-xxl;
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+		justify-content: space-between;
+		.nav-logo {
+			display: flex;
+			width: global.$space-great;
+			justify-self: center;
+		}
+	}
+
+	.nav-right {
+		display: none;
+	}
+
+	.nav-links-container {
+		width: 100%;
+		position: absolute;
+		display: flex;
+		justify-content: center;
+		background-color: global.$background-color-white;
+
+		ul,
+		&.nav-links {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			padding: 0;
+			> li a {
+				color: global.$text-color-grey;
+				font-family: global.$text-font;
+				font-size: global.$font-18;
+			}
+		}
+	}
+}

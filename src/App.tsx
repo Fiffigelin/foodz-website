@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { useRef, useCallback } from "react";
 import HeroSection from "./pages/sections/hero/hero-section";
+import Navbar from "./components/navbar/navbar";
+
 import "./App.scss";
-import OrderNowButton from "./components/order-now-button/order-now-btn";
 
 const sections = [
 	"Sektion 1",
@@ -44,7 +45,7 @@ function App() {
 
 	return (
 		<div className="container" onWheel={handleScroll}>
-			<nav className="nav-container">
+			{/* <nav className="nav-container">
 				<div className="nav-left">
 					<div className="nav-logo">
 						<img
@@ -61,7 +62,8 @@ function App() {
 					<div className="nav-link">Contact</div>
 					<OrderNowButton />
 				</div>
-			</nav>
+			</nav> */}
+			<Navbar />
 
 			{sections.map((text, index) => (
 				<div
