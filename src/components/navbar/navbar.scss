@@ -2,16 +2,19 @@
 
 .nav-container {
 	display: grid;
-	grid-template-columns: auto 1fr auto;
+	grid-template-columns: 1fr 1fr;
 	grid-template-rows: auto auto;
 	align-items: center;
-	padding: global.$space-medium;
+	padding: global.$space-8 0;
 	background-color: global.$background-color-white;
-	margin: global.$space-small global.$space-xxl;
-	position: relative;
+	position: fixed;
+	width: 100%;
+	z-index: 9999;
+	justify-content: space-between;
 }
 
 .nav-left {
+	margin-left: global.$space-20;
 	.nav-logo {
 		display: flex;
 		width: global.$space-great;
@@ -22,6 +25,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
+	margin: global.$space-4 global.$space-20;
 
 	.hamburger-container {
 		grid-row: 1;
@@ -31,13 +35,18 @@
 
 .nav-links-container {
 	grid-row: 2;
-	display: flex;
+	display: none;
 	flex-direction: column;
 	align-items: center;
 	background-color: global.$background-color-white;
 	width: 100%;
 	position: absolute;
 	top: 100%;
+	padding-bottom: global.$space-20;
+
+	&.open {
+		display: flex;
+	}
 
 	.nav-link {
 		font-family: global.$text-font;
@@ -50,43 +59,80 @@
 	}
 }
 
-@media screen and (min-width: global.$dimensions-tablet) and (max-width: global.$dimensions-laptop) {
+@media screen and (min-width: global.$dimensions-tablet) {
 	.nav-container {
+		padding-top: global.$space-20;
 		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		margin: global.$space-small global.$space-60;
+
 		.nav-left {
-			padding: global.$space-medium;
-			margin: global.$space-small global.$space-xxl;
+			// padding: global.$space-8;
+			margin-left: global.$space-40;
 			display: flex;
 			align-items: center;
 			flex-direction: row;
 			justify-content: space-between;
 			.nav-logo {
 				display: flex;
-				width: global.$space-great;
+				width: 150px;
+				min-width: global.$space-great;
 				justify-self: center;
 			}
 		}
 
 		.nav-right {
+			display: none;
+		}
+
+		.nav-links-container {
 			display: flex;
 			flex-direction: row;
-			justify-content: space-between;
-			align-items: center;
-			gap: global.$space-medium;
-			.nav-link {
-				cursor: pointer;
-				margin: global.$space-small;
-				color: global.$text-color-grey;
-				font-family: global.$text-font;
-				font-size: global.$font-18;
+			position: static;
+			width: auto;
+			gap: global.$space-20;
+			padding-bottom: 0;
+			margin-right: global.$space-40;
+			.order-btn {
+				display: block;
 			}
 		}
-		.hamburger-container,
-		.nav-links-container {
+	}
+}
+
+@media screen and (min-width: global.$dimensions-laptop) {
+	.nav-container {
+		display: flex;
+		padding-top: global.$space-20;
+
+		.nav-left {
+			padding: global.$space-8;
+			margin-left: global.$space-great;
+			display: flex;
+			align-items: center;
+			flex-direction: row;
+			justify-content: space-between;
+			.nav-logo {
+				display: flex;
+				width: 150px;
+				min-width: global.$space-great;
+				justify-self: center;
+			}
+		}
+
+		.nav-right {
 			display: none;
+		}
+
+		.nav-links-container {
+			display: flex;
+			flex-direction: row;
+			position: static;
+			width: auto;
+			gap: global.$space-20;
+			padding-bottom: 0;
+			margin-right: global.$space-great;
+			.order-btn {
+				display: block;
+			}
 		}
 	}
 }

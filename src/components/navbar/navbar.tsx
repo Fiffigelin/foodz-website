@@ -7,17 +7,6 @@ import "./navbar.scss";
 const Navbar = () => {
 	const [isMenuOpen, setMenuOpen] = useState(false);
 
-	const hamburgerMenu = () => {
-		return (
-			<div className="hamburger-container">
-				<IconButton
-					icon={isMenuOpen ? "close" : "hamburger"}
-					onClick={() => setMenuOpen(!isMenuOpen)}
-				/>
-			</div>
-		);
-	};
-
 	return (
 		<nav className="nav-container">
 			<div className="nav-left">
@@ -37,15 +26,13 @@ const Navbar = () => {
 					/>
 				</div>
 			</div>
-			{isMenuOpen && (
-				<div className={`nav-links-container ${isMenuOpen ? "open" : ""}`}>
-					<div className="nav-link">Home</div>
-					<div className="nav-link">Menu</div>
-					<div className="nav-link">Blog</div>
-					<div className="nav-link">Contact</div>
-					<OrderNowButton />
-				</div>
-			)}
+			<div className={`nav-links-container ${isMenuOpen ? "open" : ""}`}>
+				<div className="nav-link">Home</div>
+				<div className="nav-link">Menu</div>
+				<div className="nav-link">Blog</div>
+				<div className="nav-link">Contact</div>
+				<OrderNowButton />
+			</div>
 		</nav>
 	);
 };

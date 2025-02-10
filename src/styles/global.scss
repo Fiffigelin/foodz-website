@@ -6,7 +6,7 @@ $text-font: "Poppins", sans-serif;
 $dimensions-small-mobile: 320px;
 $dimensions-mobile: 480px;
 $dimensions-tablet: 768px;
-$dimensions-laptop: 1024px;
+$dimensions-laptop: 1200px;
 $dimensions-desktop: 1440px;
 
 $primary-color-green: #04b90b;
@@ -18,11 +18,12 @@ $text-color-black: #23262f;
 $text-color-grey: #777e90;
 $text-color-white: #fcfcfd;
 
-$space-small: 4px;
-$space-medium: 8px;
-$space-large: 12px;
-$space-xl: 16px;
-$space-xxl: 20px;
+$space-4: 4px;
+$space-8: 8px;
+$space-12: 12px;
+$space-16: 16px;
+$space-20: 20px;
+$space-30: 30px;
 $space-40: 40px;
 $space-50: 50px;
 $space-60: 60px;
@@ -33,7 +34,8 @@ $font-hero: 72px;
 $font-h1: 3.5rem;
 $font-h2: 3.5rem;
 $font-h3: 3.5rem;
-$font-h4: 32px;
+$font-36: 36px;
+$font-32: 32px;
 $font-28: 28px;
 $font-24: 24px;
 $font-20: 20px;
@@ -46,12 +48,12 @@ h1 {
 	font-size: $font-h1;
 	font-family: $title-font;
 	color: $text-color-black;
-	margin: $space-large 0;
+	margin: $space-12 0;
 }
 
 p {
 	font-size: $font-24;
 	font-family: $text-font;
 	color: $text-color-grey;
-	margin: $space-large 0;
+	margin: $space-12 0;
 }

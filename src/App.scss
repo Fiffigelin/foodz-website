@@ -3,6 +3,7 @@
 html,
 body,
 #root {
+	overflow: hidden;
 	height: 100%;
 	width: 100%;
 	margin: 0;
@@ -49,11 +50,11 @@ body,
 // 			background-color: global.$background-color-white;
 // 			justify-content: space-between;
 // 			position: absolute;
-// 			padding: global.$space-medium 0;
+// 			padding: global.$space-8 0;
 // 			z-index: 9999;
 
 // 			.nav-left {
-// 				margin: global.$space-small global.$space-medium;
+// 				margin: global.$space-4 global.$space-8;
 // 				margin-left: global.$space-great;
 // 				display: flex;
 // 				align-self: center;
@@ -65,15 +66,15 @@ body,
 // 			}
 
 // 			.nav-right {
-// 				margin: global.$space-small global.$space-great;
+// 				margin: global.$space-4 global.$space-great;
 // 				display: flex;
 // 				flex-direction: row;
 // 				justify-content: space-between;
 // 				align-items: center;
-// 				gap: global.$space-xl;
+// 				gap: global.$space-16;
 // 				.nav-link {
 // 					cursor: pointer;
-// 					margin: global.$space-small;
+// 					margin: global.$space-4;
 // 					color: global.$text-color-grey;
 // 					font-family: global.$text-font;
 // 					font-size: global.$font-18;
