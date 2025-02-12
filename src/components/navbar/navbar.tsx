@@ -8,7 +8,7 @@ const Navbar = () => {
 	const [isMenuOpen, setMenuOpen] = useState(false);
 
 	return (
-		<nav className="nav-container">
+		<header className="nav-container">
 			<div className="nav-left">
 				<div className="nav-logo">
 					<img
@@ -33,7 +33,7 @@ const Navbar = () => {
 				<div className="nav-link">Contact</div>
 				<OrderNowButton />
 			</div>
-		</nav>
+		</header>
 	);
 };
 

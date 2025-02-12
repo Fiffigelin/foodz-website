@@ -22,7 +22,7 @@
 
 			h1 {
 				color: global.$text-color-black;
-				font-size: clamp(1.5rem, 5vw, 2.5rem);
+				font-size: clamp(24px, 5vw, 72px);
 				font-family: global.$title-font;
 				margin: global.$space-4 0;
 			}
@@ -80,9 +80,9 @@
 
 		.hero-left {
 			text-align: left;
-			align-self: flex-end;
+			align-self: center;
 			align-items: start;
-			margin-left: global.$space-40;
+			margin-left: clamp(8px, 6vw, 40px);
 			margin-top: global.$space-20;
 			justify-items: start;
 			.hero-text {
@@ -91,7 +91,7 @@
 				}
 				p {
 					max-width: 100%;
-					font-size: global.$font-18;
+					font-size: global.$font-24;
 				}
 			}
 			.order-menu {
@@ -111,13 +111,13 @@
 				background-color: global.$background-color-grey;
 				border-radius: 16px;
 				padding: global.$space-8 global.$space-12;
-				margin-bottom: global.$space-40;
 				.stats-left,
 				.stats-right {
 					text-align: center;
+					margin: 8px 18px;
 					> h4 {
 						align-self: center;
-						font-size: global.$font-20;
+						font-size: clamp(16px, 2vw, 20px);
 						font-family: "Poppins", sans-serif;
 						color: global.$text-color-grey;
 						margin: 0;
@@ -125,7 +125,7 @@
 					> p {
 						font-family: "Poppins", sans-serif;
 						color: global.$text-color-grey;
-						font-size: global.$font-18;
+						font-size: clamp(10px, 1.5vw, 18px);
 						margin: 0;
 					}
 				}
@@ -143,11 +143,11 @@
 			justify-items: flex-end;
 			.main-img {
 				width: clamp(200px, 40vw, 350px);
-				align-self: last center;
+				align-self: center;
 				justify-self: center;
 				margin-bottom: 0;
 				margin-right: 0;
-				margin-left: 100px;
+				// margin-left: 100px;
 			}
 			.green-background {
 				width: clamp(400px, 50vw, 600px);

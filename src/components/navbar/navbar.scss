@@ -65,8 +65,8 @@
 		display: flex;
 
 		.nav-left {
-			// padding: global.$space-8;
-			margin-left: global.$space-40;
+			// margin-left: global.$space-40;
+			margin-left: clamp(8px, 6vw, 100px);
 			display: flex;
 			align-items: center;
 			flex-direction: row;
@@ -90,7 +90,8 @@
 			width: auto;
 			gap: global.$space-20;
 			padding-bottom: 0;
-			margin-right: global.$space-40;
+			margin-right: clamp(8px, 6vw, 100px);
+			// margin-right: global.$space-40;
 			.order-btn {
 				display: block;
 			}
@@ -105,7 +106,8 @@
 
 		.nav-left {
 			padding: global.$space-8;
-			margin-left: global.$space-great;
+			margin-left: clamp(8px, 6vw, 100px);
+			// margin-left: global.$space-great;
 			display: flex;
 			align-items: center;
 			flex-direction: row;
@@ -129,7 +131,8 @@
 			width: auto;
 			gap: global.$space-20;
 			padding-bottom: 0;
-			margin-right: global.$space-great;
+			margin-right: clamp(8px, 6vw, 100px);
+			// margin-right: global.$space-great;
 			.order-btn {
 				display: block;
 			}
