@@ -1,13 +1,14 @@
-import { useState } from "react";
+import { Fragment, ReactNode, useState } from "react";
 import { useRef, useCallback } from "react";
 import HeroSection from "./pages/sections/hero/hero-section";
+import SpecialOffer from "./pages/sections/special-offer/special-offer";
 import Navbar from "./components/navbar/navbar";
 
 import "./App.scss";
 
-const sections = [
-	"Sektion 1",
-	"Sektion 2",
+const sections: ReactNode[] = [
+	<HeroSection />,
+	<SpecialOffer />,
 	"Sektion 3",
 	"Sektion 4",
 	"Sektion 5",
@@ -44,37 +45,20 @@ function App() {
 	);
 
 	return (
-		<div className="container" onWheel={handleScroll}>
-			{/* <nav className="nav-container">
-				<div className="nav-left">
-					<div className="nav-logo">
-						<img
-							src="/foodz.png"
-							alt="logo"
-							style={{ objectFit: "cover", width: "100%", alignItems: "center" }}
-						/>
-					</div>
-				</div>
-				<div className="nav-right">
-					<div className="nav-link">Home</div>
-					<div className="nav-link">Menu</div>
-					<div className="nav-link">Blog</div>
-					<div className="nav-link">Contact</div>
-					<OrderNowButton />
-				</div>
-			</nav> */}
+		<Fragment>
 			<Navbar />
-
-			{sections.map((text, index) => (
-				<div
-					key={index}
-					ref={(el) => (sectionRefs.current[index] = el!)}
-					className="section"
-				>
-					{index === 0 ? <HeroSection /> : <div>{text}</div>}
-				</div>
-			))}
-		</div>
+			<div className="container" onWheel={handleScroll}>
+				{sections.map((content, index) => (
+					<div
+						key={index}
+						ref={(el) => (sectionRefs.current[index] = el!)}
+						className="section"
+					>
+						{content}
+					</div>
+				))}
+			</div>
+		</Fragment>
 	);
 }
 

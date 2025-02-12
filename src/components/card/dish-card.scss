@@ -1,0 +1,109 @@
+@use "../../styles/global.scss" as global;
+
+.dish-card {
+	background: #fff;
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+	border-radius: 15px;
+	width: 75%;
+	max-width: 285px;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	align-items: center;
+
+	.dish-image {
+		width: 50%;
+		border-radius: 10px;
+	}
+
+	.dish-header {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		align-items: center;
+
+		h1 {
+			font-size: 22px;
+		}
+
+		.heat-info {
+			display: flex;
+			align-items: center;
+			border: 1px solid global.$primary-color-green;
+			border-radius: 6px;
+			padding: 4px 8px;
+			gap: 4px;
+
+			p {
+				color: global.$primary-color-green;
+				font-size: 14px;
+				font-weight: bold;
+				margin: 0;
+			}
+		}
+	}
+
+	.reviews {
+		align-self: flex-start;
+		display: flex;
+		align-items: center;
+		gap: 5px;
+
+		.stars {
+			display: flex;
+		}
+		p {
+			color: global.$text-color-dark-grey;
+			font-size: 14px;
+			margin-bottom: 0;
+			margin-top: 2px;
+		}
+	}
+
+	.flavor {
+		text-align: left;
+		width: 100%;
+
+		ul {
+			margin: 5px 0 0 20px;
+			padding: 0;
+		}
+
+		p,
+		li {
+			color: global.$text-color-dark-grey;
+			font-size: 12px;
+			margin: 0;
+			text-align: left;
+			width: 100%;
+		}
+	}
+
+	.order {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+
+		p {
+			font-family: global.$title-font;
+			font-size: 32px;
+			color: global.$primary-color-green;
+			margin: 0;
+			width: fit-content;
+			align-self: center;
+		}
+
+		button {
+			background: global.$primary-color-green;
+			padding: 8px 16px;
+			font-size: 14px;
+			border: none;
+			cursor: pointer;
+			border-radius: 5px;
+			color: white;
+			font-weight: bold;
+		}
+	}
+}

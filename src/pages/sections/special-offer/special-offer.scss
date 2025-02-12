@@ -1,0 +1,68 @@
+@use "../../../styles/global.scss" as global;
+
+.special-offer-container {
+	display: grid;
+	margin-top: 60px;
+	justify-items: center;
+
+	h1 {
+		font-family: global.$title-font;
+		color: global.$text-color-black;
+		margin: 0;
+		font-size: clamp(24px, 5vw, 72px);
+
+		span {
+			margin-right: global.$space-12;
+		}
+
+		.green-text {
+			color: global.$primary-color-green;
+		}
+	}
+
+	p {
+		font-size: clamp(16px, 5vw, 24px);
+		color: global.$text-color-grey;
+		font-family: global.$text-font;
+		text-align: center;
+		width: 80%;
+	}
+
+	.dish-card-container {
+		display: flex;
+		justify-content: center;
+	}
+}
+
+@media screen and (min-width: global.$dimensions-tablet) {
+	.special-offer-container {
+		display: grid;
+		margin-top: 100px;
+		justify-items: center;
+
+		h2 {
+			font-family: global.$title-font;
+			color: global.$text-color-black;
+			margin: 0;
+			font-size: 42px;
+
+			span {
+				margin-right: global.$space-12;
+			}
+
+			.green-text {
+				color: global.$primary-color-green;
+			}
+		}
+
+		p {
+			font-size: 24px;
+			color: global.$text-color-grey;
+			font-family: global.$text-font;
+			width: 45%;
+		}
+	}
+}
+
+@media screen and (min-width: global.$dimensions-laptop) {
+}
