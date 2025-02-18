@@ -1,0 +1,58 @@
+@use "../../styles/global.scss" as global;
+
+.dish-scroll-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+
+	.dish-scroll-container {
+		display: flex;
+		overflow-x: auto;
+		scroll-behavior: smooth;
+		scroll-snap-type: x mandatory;
+		gap: 20px;
+		padding: 20px;
+		width: 100%;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+
+		.dish-card {
+			flex: 0 0 100%;
+			scroll-snap-align: center;
+		}
+	}
+}
+
+.scroll-controls {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	pointer-events: none;
+
+	.scroll-btn {
+		pointer-events: auto;
+		background: white;
+		border: none;
+		cursor: pointer;
+		font-size: 24px;
+		padding: 10px;
+		border-radius: 50%;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+		opacity: 0.7;
+		transition: opacity 0.2s ease-in-out;
+
+		&:hover {
+			opacity: 1;
+		}
+
+		&:disabled {
+			opacity: 0.3;
+			cursor: default;
+		}
+	}
+}

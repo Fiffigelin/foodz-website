@@ -5,7 +5,7 @@
 	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 	border-radius: 15px;
 	width: 75%;
-	max-width: 285px;
+	max-width: 225px;
 	padding: 20px;
 	display: flex;
 	flex-direction: column;
@@ -43,40 +43,50 @@
 			}
 		}
 	}
-
-	.reviews {
-		align-self: flex-start;
-		display: flex;
-		align-items: center;
-		gap: 5px;
-
-		.stars {
-			display: flex;
-		}
-		p {
-			color: global.$text-color-dark-grey;
-			font-size: 14px;
-			margin-bottom: 0;
-			margin-top: 2px;
-		}
+	&.hidden {
+		height: max-content;
 	}
 
-	.flavor {
-		text-align: left;
-		width: 100%;
+	.info-section {
+		.reviews {
+			align-self: flex-start;
+			display: flex;
+			align-items: center;
+			gap: 5px;
 
-		ul {
-			margin: 5px 0 0 20px;
-			padding: 0;
+			.stars {
+				display: flex;
+			}
+			p {
+				color: global.$text-color-dark-grey;
+				font-size: 14px;
+				margin-bottom: 0;
+				margin-top: 2px;
+				width: 100%;
+			}
 		}
 
-		p,
-		li {
-			color: global.$text-color-dark-grey;
-			font-size: 12px;
-			margin: 0;
+		.flavor {
 			text-align: left;
 			width: 100%;
+
+			ul {
+				margin: 5px 0 0 20px;
+				padding: 0;
+			}
+
+			p,
+			li {
+				color: global.$text-color-dark-grey;
+				font-size: 12px;
+				margin: 0;
+				text-align: left;
+				width: 100%;
+			}
+		}
+
+		&.hidden {
+			display: none;
 		}
 	}
 
