@@ -8,8 +8,7 @@
 	h1 {
 		font-family: global.$title-font;
 		color: global.$text-color-black;
-		margin: 0;
-		font-size: clamp(24px, 5vw, 72px);
+		font-size: clamp(24px, 5vw, 3rem);
 
 		span {
 			margin-right: global.$space-12;
@@ -21,11 +20,12 @@
 	}
 
 	p {
-		font-size: clamp(16px, 5vw, 24px);
+		font-size: clamp(16px, 5vw, 20px);
 		color: global.$text-color-grey;
 		font-family: global.$text-font;
 		text-align: center;
 		width: 80%;
+		margin-bottom: 0;
 	}
 
 	.dish-card-container {
@@ -56,7 +56,7 @@
 		}
 
 		p {
-			font-size: 24px;
+			font-size: 20px;
 			color: global.$text-color-grey;
 			font-family: global.$text-font;
 			width: 45%;
