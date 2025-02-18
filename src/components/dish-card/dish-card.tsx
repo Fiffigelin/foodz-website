@@ -3,18 +3,17 @@ import { AiFillFire } from "react-icons/ai";
 import { FaRegStar, FaStar, FaStarHalfStroke } from "react-icons/fa6";
 
 import "./dish-card.scss";
+import OrderNowButton from "../order-now-button/order-now-btn";
 
 interface Props {
-	id: number;
 	dish: Dish;
 	focus?: boolean;
 }
 
-const DishCard = ({ id, dish, focus = false }: Props) => {
-	console.log(id);
+const DishCard = ({ dish, focus = false }: Props) => {
 	console.log(focus);
 	return (
-		<article className={focus ? "dish-card" : "dish-card hidden"} key={id}>
+		<article className={focus ? "dish-card" : "dish-card hidden"} key={dish.id}>
 			<img className="dish-image" src={dish.image} alt={dish.title} />
 
 			<header className="dish-header">
@@ -49,7 +48,7 @@ const DishCard = ({ id, dish, focus = false }: Props) => {
 
 			<footer className="order">
 				<p>${dish.cost}</p>
-				<button>Order now</button>
+				<OrderNowButton />
 			</footer>
 		</article>
 	);

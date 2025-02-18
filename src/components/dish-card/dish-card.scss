@@ -2,19 +2,21 @@
 
 .dish-card {
 	background: #fff;
-	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 4px 14px;
 	border-radius: 15px;
-	width: 75%;
+	width: 100%;
 	max-width: 225px;
-	padding: 20px;
+	height: 100%;
+	max-height: 370px;
+	padding: 15px;
 	display: flex;
 	flex-direction: column;
-	gap: 15px;
+	gap: 8px;
 	align-items: center;
 
 	.dish-image {
 		width: 50%;
-		border-radius: 10px;
+		min-height: 112.5px;
 	}
 
 	.dish-header {
@@ -24,7 +26,11 @@
 		align-items: center;
 
 		h1 {
-			font-size: 22px;
+			font-size: 20px;
+			width: 50%;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			white-space: nowrap;
 		}
 
 		.heat-info {
@@ -32,8 +38,8 @@
 			align-items: center;
 			border: 1px solid global.$primary-color-green;
 			border-radius: 6px;
-			padding: 4px 8px;
-			gap: 4px;
+			padding: 4px 6px;
+			gap: 2px;
 
 			p {
 				color: global.$primary-color-green;
@@ -95,6 +101,7 @@
 		justify-content: space-between;
 		align-items: center;
 		width: 100%;
+		gap: 20px;
 
 		p {
 			font-family: global.$title-font;
@@ -105,15 +112,8 @@
 			align-self: center;
 		}
 
-		button {
-			background: global.$primary-color-green;
-			padding: 8px 16px;
-			font-size: 14px;
-			border: none;
-			cursor: pointer;
-			border-radius: 5px;
-			color: white;
-			font-weight: bold;
+		.order-btn {
+			width: 50%;
 		}
 	}
 }

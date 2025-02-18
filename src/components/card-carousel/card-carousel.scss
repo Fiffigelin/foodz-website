@@ -1,58 +1,45 @@
 @use "../../styles/global.scss" as global;
 
 .dish-scroll-wrapper {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 	position: relative;
 	overflow: hidden;
-	width: 100%;
-
 	.dish-scroll-container {
 		display: flex;
-		overflow-x: auto;
 		scroll-behavior: smooth;
+		overflow-x: auto;
+		scrollbar-width: none;
 		scroll-snap-type: x mandatory;
 		gap: 20px;
+		overflow-x: hidden;
+		justify-content: center;
 		padding: 20px;
-		width: 100%;
-
-		&::-webkit-scrollbar {
-			display: none;
-		}
-
-		.dish-card {
-			flex: 0 0 100%;
-			scroll-snap-align: center;
-		}
+	}
+	.dish-card {
+		transition: transform 0.5s ease, opacity 0.5s ease;
+	}
+}
+.scroll-controls {
+	display: none;
+	width: 100%;
+	top: 50%;
+	justify-content: center;
+	gap: 50px;
+	.scroll-controls button {
+		border: none;
+		cursor: pointer;
+	}
+	button,
+	button:hover,
+	button:focus {
+		padding: 0;
+		border: none;
+		outline: none;
+		background-color: transparent;
 	}
 }
 
-.scroll-controls {
-	display: flex;
-	justify-content: space-between;
-	width: 100%;
-	pointer-events: none;
-
-	.scroll-btn {
-		pointer-events: auto;
-		background: white;
-		border: none;
-		cursor: pointer;
-		font-size: 24px;
-		padding: 10px;
-		border-radius: 50%;
-		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-		opacity: 0.7;
-		transition: opacity 0.2s ease-in-out;
-
-		&:hover {
-			opacity: 1;
-		}
-
-		&:disabled {
-			opacity: 0.3;
-			cursor: default;
-		}
+@media screen and (min-width: global.$dimensions-laptop) {
+	.scroll-controls {
+		display: flex;
 	}
 }
