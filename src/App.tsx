@@ -20,7 +20,7 @@ function App() {
 
 	const handleScroll = useCallback(
 		(event: React.WheelEvent) => {
-			event.preventDefault();
+			// event.preventDefault();
 
 			const sensitivityUp = 0.05;
 			const sensitivityDown = 0.04;
