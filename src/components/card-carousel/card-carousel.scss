@@ -3,6 +3,7 @@
 .dish-scroll-wrapper {
 	position: relative;
 	overflow: hidden;
+	width: 100%;
 	.dish-scroll-container {
 		display: flex;
 		scroll-behavior: smooth;
