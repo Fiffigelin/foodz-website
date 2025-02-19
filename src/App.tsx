@@ -3,13 +3,14 @@ import { useRef, useCallback } from "react";
 import HeroSection from "./pages/sections/hero/hero-section";
 import SpecialOffer from "./pages/sections/special-offer/special-offer";
 import Navbar from "./components/navbar/navbar";
+import Michelin from "./pages/sections/michelin/michelin";
 
 import "./App.scss";
 
 const sections: ReactNode[] = [
 	<HeroSection />,
 	<SpecialOffer />,
-	"Sektion 3",
+	<Michelin />,
 	"Sektion 4",
 	"Sektion 5",
 ];
