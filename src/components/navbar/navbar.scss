@@ -2,10 +2,10 @@
 
 .nav-container {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: auto auto;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: auto;
 	align-items: center;
-	padding: global.$space-8 0;
+	padding: global.$space-12 0;
 	background-color: global.$background-color-white;
 	position: fixed;
 	width: 100%;
@@ -61,12 +61,10 @@
 
 @media screen and (min-width: global.$dimensions-tablet) {
 	.nav-container {
-		padding-top: global.$space-20;
 		display: flex;
 
 		.nav-left {
-			// margin-left: global.$space-40;
-			margin-left: clamp(8px, 6vw, 100px);
+			margin-left: clamp(8px, 6vw, 40px);
 			display: flex;
 			align-items: center;
 			flex-direction: row;
@@ -91,7 +89,6 @@
 			gap: global.$space-20;
 			padding-bottom: 0;
 			margin-right: clamp(8px, 6vw, 100px);
-			// margin-right: global.$space-40;
 			.order-btn {
 				display: block;
 			}
@@ -102,12 +99,10 @@
 @media screen and (min-width: global.$dimensions-laptop) {
 	.nav-container {
 		display: flex;
-		padding-top: global.$space-20;
 
 		.nav-left {
 			padding: global.$space-8;
-			margin-left: clamp(8px, 6vw, 100px);
-			// margin-left: global.$space-great;
+			margin-left: clamp(8px, 6vw, 40px);
 			display: flex;
 			align-items: center;
 			flex-direction: row;
@@ -132,7 +127,6 @@
 			gap: global.$space-20;
 			padding-bottom: 0;
 			margin-right: clamp(8px, 6vw, 100px);
-			// margin-right: global.$space-great;
 			.order-btn {
 				display: block;
 			}

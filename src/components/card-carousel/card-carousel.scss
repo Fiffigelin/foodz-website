@@ -10,10 +10,10 @@
 		overflow-x: auto;
 		scrollbar-width: none;
 		scroll-snap-type: x mandatory;
-		gap: 20px;
+		gap: global.$space-20;
 		overflow-x: hidden;
 		justify-content: center;
-		padding: 20px;
+		padding: clamp(0px, 0.5vw, 20px);
 	}
 	.dish-card {
 		transition: transform 0.5s ease, opacity 0.5s ease;
@@ -24,7 +24,7 @@
 	width: 100%;
 	top: 50%;
 	justify-content: center;
-	gap: 50px;
+	gap: global.$space-50;
 	.scroll-controls button {
 		border: none;
 		cursor: pointer;
