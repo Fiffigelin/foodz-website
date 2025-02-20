@@ -10,11 +10,11 @@
 	padding: global.$space-16;
 	display: flex;
 	flex-direction: column;
-	gap: 8px;
+	gap: global.$space-4;
 	align-items: center;
 
 	.dish-image {
-		width: 50%;
+		width: 60%;
 		min-height: 112.5px;
 	}
 

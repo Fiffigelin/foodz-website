@@ -4,16 +4,16 @@
 	position: relative;
 	overflow: hidden;
 	width: 100%;
+	padding-bottom: global.$space-20;
 	.dish-scroll-container {
 		display: flex;
 		scroll-behavior: smooth;
-		overflow-x: auto;
 		scrollbar-width: none;
 		scroll-snap-type: x mandatory;
 		gap: global.$space-20;
 		overflow-x: hidden;
 		justify-content: center;
-		padding: clamp(0px, 0.5vw, 20px);
+		padding: clamp(0px, 5vw, 16px);
 	}
 	.dish-card {
 		transition: transform 0.5s ease, opacity 0.5s ease;
@@ -36,6 +36,12 @@
 		border: none;
 		outline: none;
 		background-color: transparent;
+	}
+}
+
+@media screen and (min-width: global.$dimensions-tablet) {
+	.dish-scroll-wrapper {
+		padding-bottom: global.$space-20;
 	}
 }
 

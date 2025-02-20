@@ -44,22 +44,21 @@ const DishCarousel = ({ items }: Props) => {
 							<DishCard key={index} focus={focusSlide === index} dish={item} />
 						))}
 				</div>
-			</div>
+				<div className="scroll-controls">
+					<button
+						className={`scroll-btn ${slide > 0 ? "active" : ""}`}
+						onClick={prevSlide}
+					>
+						<FiArrowLeftCircle size={30} color="grey" />
+					</button>
 
-			<div className="scroll-controls">
-				<button
-					className={`scroll-btn ${slide > 0 ? "active" : ""}`}
-					onClick={prevSlide}
-				>
-					<FiArrowLeftCircle size={30} color="grey" />
-				</button>
-
-				<button
-					className={`scroll-btn ${slide < items.length - 1 ? "active" : ""}`}
-					onClick={nextSlide}
-				>
-					<FiArrowRightCircle size={30} color="grey" />
-				</button>
+					<button
+						className={`scroll-btn ${slide < items.length - 1 ? "active" : ""}`}
+						onClick={nextSlide}
+					>
+						<FiArrowRightCircle size={30} color="grey" />
+					</button>
+				</div>
 			</div>
 		</Fragment>
 	);
