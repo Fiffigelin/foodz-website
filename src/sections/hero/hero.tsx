@@ -1,35 +1,33 @@
-import { motion, useScroll, useSpring, useTransform } from "motion/react";
-import OrderNowButton from "../../components/order-now-button/order-now-btn";
+import useDevice from "../../hooks/use-device";
+import HeroMobile from "../../components/hero/hero-mobile";
 
 function Hero() {
-  const {scrollYProgress} = useScroll()
-  const y = useSpring(scrollYProgress, {damping: 40});
-
-  const mountain = useTransform(y, [0, 0.15], ["-25%%", "50%"]);
+  const {isMobile} = useDevice();
 
   return (
-    <section className="relative w-screen min-h-screen mt-20 md:mt-30 overflow-hidden">
-      <div className="flex flex-col justify-between mx-auto max-w-7xl min-h-screen
-        md:flex-row">
+    <section className="relative w-screen min-h-screen mt-20 md:mt-30 overflow-hidden mx-auto max-w-7xl">
+      {isMobile ? (
+        <HeroMobile />
+      ) : (
+        <div>DESKTOP</div>
+      )}
+      {/* <div className="flex flex-col justify-between min-h-screen">
 
-        {/* Top Content */}
-        <div className="flex flex-col items-center justify-between py-4 px-10
-          md:items-start md:justify-baseline">
+        <div className="flex flex-col flex-1 items-center justify-evenly px-10">
           <div className="text-center">
             <h1 className="font-(family-name:--font-header) text-4xl mb-2">You're hungry.</h1>
             <h2 className="font-(family-name:--font-header) text-4xl mb-2">You've Got Taste.</h2>
             <p className="text-center mx-10">Explore your Taste with special food in the special place.</p>
           </div>
 
-        </div>
-
           <div className="flex items-center justify-center">
             <OrderNowButton />
             <a className="hidden" href="#menu">Explore Menu</a>
           </div>
+        </div>
 
-        {/* Bottom Content */}
-        <div className="relative flex h-110 justify-center items-center">
+
+        <div className="relative flex flex-2 h-110 justify-center items-center">
           <motion.div
           className="inset-0 z-200 size-50"
           style={{
@@ -52,8 +50,7 @@ function Hero() {
             md:hidden"
           />
         </div>
-
-      </div>
+      </div> */}
     </section>
   );
 }
