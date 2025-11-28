@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { IconType } from "react-icons";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { VscChromeClose } from "react-icons/vsc";
@@ -12,7 +12,7 @@ interface Props {
 }
 
 const IconButton = ({ icon, onClick }: Props) => {
-	const [showClose, setClose] = useState(false);
+	// const [showClose, setClose] = useState(false);
 
 	const getIcon = (icon: string): IconType => {
 		switch (icon) {
@@ -26,12 +26,12 @@ const IconButton = ({ icon, onClick }: Props) => {
 	};
 	const IconComponent = getIcon(icon);
 
-	const handleOnClick = () => {
-		if (onClick) {
-			onClick();
-			setClose(!showClose);
-		}
-	};
+	// const handleOnClick = () => {
+	// 	if (onClick) {
+	// 		onClick();
+	// 		setClose(!showClose);
+	// 	}
+	// };
 
 	return (
 		<button className="icon-button" onClick={onClick}>

@@ -84,10 +84,9 @@
 	//TODO Fix styling for större skärmar
 
 	.michelin {
-		padding: 100px 50px 0 50px;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		justify-content: flex-end;
 		align-items: center;
 		h1 {
 			font-family: global.$title-font;
@@ -110,6 +109,7 @@
 			width: 100%;
 			gap: 20px;
 			.michelin-left {
+				display: block;
 				padding: 20px;
 				img {
 					width: 90%;
@@ -117,48 +117,38 @@
 			}
 
 			.michelin-right {
-				.title-info {
+				.link-container {
 					display: flex;
 					flex-direction: row;
 					gap: 20px;
-					h3 {
-						font-family: global.$title-font;
-						color: global.$primary-color-green;
-						font-size: 16px;
-					}
-					.link-container {
-						display: flex;
-						flex-direction: row;
-						gap: 20px;
-						cursor: pointer;
+					cursor: pointer;
 
-						p {
-							font-family: global.$text-font;
-							color: global.$text-color-dark-grey;
-							width: 100%;
-							font-size: 16px;
-						}
-						a {
-							font-size: 14px;
-							font-family: global.$title-font;
-							color: global.$primary-color-green;
-						}
-						a,
-						.icon-arrow {
-							align-self: center;
-						}
-					}
-				}
-				.text-info {
-					display: flex;
-					flex-direction: column;
-					gap: 20px;
 					p {
 						font-family: global.$text-font;
 						color: global.$text-color-dark-grey;
 						width: 100%;
 						font-size: 16px;
 					}
+					a {
+						font-size: 14px;
+						font-family: global.$title-font;
+						color: global.$primary-color-green;
+					}
+					a,
+					.icon-arrow {
+						align-self: center;
+					}
+				}
+			}
+			.text-info {
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+				p {
+					font-family: global.$text-font;
+					color: global.$text-color-dark-grey;
+					width: 100%;
+					font-size: 16px;
 				}
 			}
 		}

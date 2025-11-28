@@ -8,11 +8,10 @@ const HeroSection = () => {
 			<section className="hero">
 				<div className="hero-left">
 					<div className="hero-text">
-						<h1>You've Got Questions.</h1>
+						<h1>You're hungry.</h1>
 						<h1>You've Got Taste.</h1>
 						<p>
-							Explore your Taste with special food in the special place. This text
-							don't have any meaning
+							Explore your Taste with special food in the special place.
 						</p>
 					</div>
 					<div className="order-menu">

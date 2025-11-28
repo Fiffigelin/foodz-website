@@ -7,6 +7,7 @@
 	align-items: center;
 	flex-grow: 1;
 	width: 100%;
+	margin-top:50px;
 
 	.hero-left {
 		display: grid;
@@ -85,7 +86,7 @@
 			align-self: center;
 			align-items: start;
 			margin-left: clamp(8px, 6vw, 40px);
-			margin-top: global.$space-20;
+			margin-top: 50;
 			justify-items: start;
 			.hero-text {
 				h1 {
