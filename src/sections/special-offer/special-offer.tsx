@@ -24,7 +24,6 @@ function SpecialOffer() {
         className="
           text-center 
           text-(--text-neutral)
-          font-(family-name:--font-text)
           text-[clamp(18px,1.8vw+0.5rem,24px)]
           mb-0
         "
