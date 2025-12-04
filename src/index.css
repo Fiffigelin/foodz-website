@@ -37,3 +37,7 @@ body {
 .snap-child {
   scroll-snap-align: center;
 }
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

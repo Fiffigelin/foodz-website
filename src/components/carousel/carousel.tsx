@@ -89,7 +89,11 @@ export default function InfiniteCarousel() {
       <div className="relative w-full h-full py-4 md:py-12">
         <div
           ref={trackRef}
-          className="flex transition-transform duration-600 ease-out md:transition-none md:overflow-visible overflow-x-auto scroll-snap-x snap-mandatory"
+          className="
+            flex transition-transform duration-600 ease-out 
+            md:transition-none md:overflow-visible
+            overflow-x-auto scrollbar-hide
+            scroll-snap-x snap-mandatory"
           onTouchStart={isMobile ? onTouchStart : undefined}
           onTouchMove={isMobile ? onTouchMove : undefined}
           onTouchEnd={isMobile ? onTouchEnd : undefined}
