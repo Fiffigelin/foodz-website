@@ -1,11 +1,12 @@
 import Carousel from "../../components/carousel/carousel";
 
 function SpecialOffer() {
+
   return (
     <section className="
     min-h-screen w-full flex flex-col
     h-full mt-40 justify-items-center content-end">
-      {/* Title */}
+
       <h1
         className="
           text-center 
@@ -19,7 +20,6 @@ function SpecialOffer() {
         <span>Offers</span>
       </h1>
 
-      {/* Description */}
       <p
         className="
           text-center 
@@ -32,7 +32,6 @@ function SpecialOffer() {
         reach you now!
       </p>
 
-      {/* Carousel */}
         <Carousel />
     </section>
   );

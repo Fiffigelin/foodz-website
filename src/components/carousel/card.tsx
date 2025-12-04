@@ -6,17 +6,27 @@ import PrimaryButton from "../primary-button/primary-button";
 type CardProps = {
   item: Dish
   focus: boolean
+  visibleSlides: number
+  isMobile: boolean
 }
-function Card({ item, focus }: CardProps) {
+function Card({ item, focus, visibleSlides, isMobile }: CardProps) {
+  let className;
+  if(isMobile || !focus) {
+    className="h-40 scale-y-100 opacity-80"
+  } else {
+    className="h-60 scale-y-110 opacity-100"
+  }
 
   return (
-    <div key={item.id} className="shrink-0 w-1/3 px-2">
+    <div
+      key={item.id}
+      className={`m-2 px-2 flex-none snap-child md:m-0 ${visibleSlides === 1 ? "w-full" : "w-1/3"}`}>
       <div
-        className={`bg-white rounded-2xl shadow-[0px_4px_14px_rgba(149,157,165,0.2)] flex flex-col gap-1 justify-center items-center transition-all duration-500 w-full h-auto p-4 ${
-          focus
-            ? "h-60 scale-y-110 opacity-100"
-            : "h-40 scale-y-100 opacity-80"
-        }`}
+        className={`
+          bg-white rounded-2xl shadow-[0px_4px_14px_rgba(149,157,165,0.2)] 
+          flex flex-col gap-1 justify-center items-center 
+          transition-all duration-500 w-full h-auto p-4 
+          ${className}`}
       >
         {/* Dish image */}
         <img
@@ -34,7 +44,7 @@ function Card({ item, focus }: CardProps) {
           </div>
         </div>
 
-        <div className={`${!focus && "hidden"} w-full mt-2 flex flex-col gap-2`}>
+        <div className={`${!focus && !isMobile && "hidden"} w-full mt-2 flex flex-col gap-2`}>
           {/* Reviews */}
           <div className="flex items-center gap-2">
             <div className="flex">
