@@ -1,5 +1,5 @@
 import { motion, useScroll, useSpring, useTransform } from "motion/react";
-import OrderNowButton from "../order-now-button/order-now-btn";
+import PrimaryButton from "../primary-button/primary-button";
 
 function HeroMobile() {
   const {scrollYProgress} = useScroll()
@@ -16,7 +16,7 @@ function HeroMobile() {
           <p className="text-center mx-10">Explore your Taste with special food in the special place.</p>
         </div>
         <div className="flex items-center justify-center">
-          <OrderNowButton />
+          <PrimaryButton />
           <a className="hidden" href="#menu">Explore Menu</a>
         </div>
       </div>

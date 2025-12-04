@@ -5,7 +5,7 @@
   --hero-img: url("/hero-ramen.png");
   --font-header: "Alice", sans-serif;
   --color-background: #fcfcfd;
-  --navtext-primary: #777e90;
+  --text-neutral: #777e90;
   --navtext-hover: #575c69;
 
   --color-light_green: #ddf3d8;
@@ -36,6 +36,7 @@ html {
   overflow-x:hidden;
 }
 body {
+  background-color: var(--color-background);
   font-family: "Poppins", sans-serif;;
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -43,10 +44,6 @@ body {
 
 .c-space {
   @apply sm:px-10 px-5 lg:px-15;
-}
-
-.hover-animation {
-  @apply hover:-translate-y-1 duration-200;
 }
 
 .section-spacing {

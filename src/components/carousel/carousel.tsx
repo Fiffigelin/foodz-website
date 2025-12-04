@@ -1,60 +1,126 @@
-import { useState } from "react";
-import { dishData } from "../../../data/dishes";
+import { useEffect, useRef, useState } from "react";
+import { dishData } from "../../data/dishes";
+import Card from "./card";
 
-const slides = ["Slide 1", "Slide 2", "Slide 3", "Slide 4", "Slide 5", "Slide 6"];
+type CarouselProps = {
+  visibleSlides?: number;
+};
 
-export default function Carousel() {
-  const [current, setCurrent] = useState(0);
-  const visibleSlides = 3;
+export default function InfiniteCarousel({
+  visibleSlides = 3,
+}: CarouselProps) {
+  const trackRef = useRef<HTMLDivElement>(null);
+  const [current, setCurrent] = useState<number>(0);
+  const total = dishData.length;
 
-  const next = () => {
-    if (current < dishData.length - visibleSlides) setCurrent(current + 1);
-  };
+  // Skapa clones
+  const loopedData = [
+    ...dishData.slice(-visibleSlides),
+    ...dishData,
+    ...dishData.slice(0, visibleSlides),
+  ];
 
-  const prev = () => {
-    if (current > 0) setCurrent(current - 1);
-  };
+  const nextSlide = () => setCurrent((prev) => prev + 1);
+  const prevSlide = () => setCurrent((prev) => prev - 1);
+
+  useEffect(() => {
+    const track = trackRef.current;
+    if (!track) return;
+
+    const handleTransitionEnd = () => {
+      // Clone → original höger
+      if (current >= total) {
+        const realIndex = current % total;
+        track.style.transition = "none";
+        setCurrent(realIndex);
+        track.style.transform = `translateX(-${
+          (realIndex + visibleSlides) * (100 / visibleSlides)
+        }%)`;
+
+        // Dubbel RAF för mjuk återställning
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            track.style.transition = "transform 0.6s ease-out";
+          });
+        });
+      }
+
+      // Clone → original vänster
+      if (current < 0) {
+        const realIndex = total + current;
+        track.style.transition = "none";
+        setCurrent(realIndex);
+        track.style.transform = `translateX(-${
+          (realIndex + visibleSlides) * (100 / visibleSlides)
+        }%)`;
+
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            track.style.transition = "transform 0.7s ease-out";
+          });
+        });
+      }
+    };
+
+    track.addEventListener("transitionend", handleTransitionEnd);
+    return () =>
+      track.removeEventListener("transitionend", handleTransitionEnd);
+  }, [current, total, visibleSlides]);
+
+  // Mitt-index för scaling
+  const centerIndex = (current + 1 + visibleSlides) % loopedData.length;
 
   return (
-    <div className="relative w-full overflow-hidden py-8">
-      {/* Slides wrapper */}
-      <div
-        className="flex transition-transform duration-500 ease-out"
-        style={{
-          transform: `translateX(-${current * (100 / visibleSlides)}%)`,
-        }}
-      >
-        {dishData.map((item, index) => {
-          const centerIndex = current + 1;
+    <div>
+      <div className="relative w-full h-full overflow-hidden py-12">
+        {/* Slides wrapper */}
+        <div
+          ref={trackRef}
+          className="flex transition-transform duration-600 ease-out"
+          style={{
+            transform: `translateX(-${
+              (current + visibleSlides) * (100 / visibleSlides)
+            }%)`,
+          }}
+        >
+          {loopedData.map((item, index) => {
+            const isCenter = index === centerIndex;
 
-          return (
-            <div key={index} className="shrink-0 w-1/3 px-2">
-              <div
-                className={`bg-indigo-50 rounded-2xl flex justify-center items-center transition-all duration-500
-                  ${index === centerIndex ? "h-80 scale-y-110" : "h-64 scale-y-100"}`}
-              >
-                <span className="text-2xl font-semibold text-indigo-600">{item.title}</span>
-              </div>
-            </div>
-          );
-        })}
+            return (
+              <Card key={`${item.id}-${index}`} item={item} focus={isCenter}/>
+            );
+          })}
+        </div>
       </div>
 
       {/* Buttons */}
-      <button
-        onClick={prev}
-        className="left-2 top-1/2 -translate-y-1/2 bg-white shadow px-3 py-2 rounded-full disabled:opacity-50"
-        disabled={current === 0}
-      >
-        ‹
-      </button>
-      <button
-        onClick={next}
-        className="right-2 top-1/2 -translate-y-1/2 bg-white shadow px-3 py-2 rounded-full disabled:opacity-50"
-        disabled={current >= slides.length - visibleSlides}
-      >
-        ›
-      </button>
+      <div className="flex justify-center gap-13 py-2">
+        <button
+          onClick={prevSlide}
+          className="
+            bg-white shadow-md 
+            w-10 h-10
+            flex items-center justify-center
+            rounded-full 
+            disabled:opacity-50
+          "
+        >
+          ‹
+        </button>
+
+        <button
+          onClick={nextSlide}
+          className="
+            bg-white shadow-md
+            w-10 h-10
+            flex items-center justify-center
+            rounded-full
+            disabled:opacity-50
+          "
+        >
+          ›
+        </button>
+      </div>
     </div>
   );
 }

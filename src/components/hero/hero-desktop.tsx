@@ -1,5 +1,5 @@
 import { motion, useScroll, useSpring, useTransform } from "motion/react";
-import OrderNowButton from "../order-now-button/order-now-btn";
+import PrimaryButton from "../primary-button/primary-button";
 
 function HeroDesktop() {
   const {scrollYProgress} = useScroll()
@@ -33,7 +33,7 @@ function HeroDesktop() {
           </div>
 
 				  <div className="flex flex-row gap-8">
-				  	<OrderNowButton />
+				  	<PrimaryButton />
 				  	<a href="#menu" className="self-center text-lg font-thin text-(--color-green)">Explore Menu</a>
 				  </div>
 				</div>
