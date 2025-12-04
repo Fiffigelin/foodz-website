@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { useState } from "react";
 import { RiMenuLine, RiCloseLargeLine  } from "react-icons/ri";
 import NavbarItem, { type NavlistItem } from "./navbar-item";
-import OrderNowButton from "../../components/order-now-button/order-now-btn";
+import PrimaryButton from "../../components/primary-button/primary-button";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -49,7 +49,7 @@ function Navbar() {
           <nav
             className="hidden sm:flex gap-5">
               <NavbarItem navlist={nav} />
-              <OrderNowButton />
+              <PrimaryButton />
           </nav>
         </div>
       </div>

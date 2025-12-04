@@ -1,5 +1,5 @@
 import { Fragment, useState } from "react";
-import { Dish } from "../../../data/dishes";
+import { Dish } from "../../data/dishes";
 import DishCard from "../dish-card/dish-card";
 
 import "./card-carousel.scss";

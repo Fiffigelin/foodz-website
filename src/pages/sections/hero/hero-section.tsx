@@ -1,6 +1,6 @@
 import { Fragment } from "react/jsx-runtime";
 import "./hero-section.scss";
-import OrderNowButton from "../../../components/order-now-button/order-now-btn";
+import PrimaryButton from "../../../components/primary-button/primary-button";
 
 const HeroSection = () => {
 	return (
@@ -15,7 +15,7 @@ const HeroSection = () => {
 						</p>
 					</div>
 					<div className="order-menu">
-						<OrderNowButton />
+						<PrimaryButton />
 						<a href="#menu">Explore Menu</a>
 					</div>
 					<div className="stats-container">

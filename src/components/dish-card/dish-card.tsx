@@ -3,7 +3,7 @@ import { AiFillFire } from "react-icons/ai";
 import { FaRegStar, FaStar, FaStarHalfStroke } from "react-icons/fa6";
 
 import "./dish-card.scss";
-import OrderNowButton from "../order-now-button/order-now-btn";
+import PrimaryButton from "../primary-button/primary-button";
 
 interface Props {
 	dish: Dish;
@@ -48,7 +48,7 @@ const DishCard = ({ dish, focus = false }: Props) => {
 
 			<footer className="order">
 				<p>${dish.cost}</p>
-				<OrderNowButton />
+				<PrimaryButton />
 			</footer>
 		</article>
 	);
