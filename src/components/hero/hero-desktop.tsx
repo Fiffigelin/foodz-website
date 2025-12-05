@@ -1,5 +1,7 @@
 import { motion, useScroll, useSpring, useTransform } from "motion/react";
 import PrimaryButton from "../primary-button/primary-button";
+import Paragraph from "../text/paragraph";
+import TextHeader from "../text/text-header";
 
 function HeroDesktop() {
   const {scrollYProgress} = useScroll()
@@ -10,17 +12,15 @@ function HeroDesktop() {
   return (
     <div className="flex flex-row mx-auto min-h-screen max-w-7xl c-space">
 
-			<div className="flex flex-col w-1/2 justify-evenly">
+			<div className="flex flex-col w-4/5 justify-evenly">
 				<div className="flex flex-col max-w-[90%] justify-evenly">
-					<h1 className="font-(family-name:--font-header) my-4 text-5xl lg:text-6xl">You're hungry.</h1>
-					<h1 className="font-(family-name:--font-header) my-4 text-5xl lg:text-6xl">You've Got Taste.</h1>
-					<p className="text-2xl text-pretty my-4 xl:text-3xl">
-						Explore your Taste with special food in the special place.
-					</p>
+          <TextHeader text={"You've Got Questions."} className="mb-3 lg:mb-6 2xl:mb-8" />
+          <TextHeader text={"You've Got Taste."} className="mb-3 lg:mb-6 2xl:mb-8" />
+          <Paragraph text={"Explore your Taste with special food in the special place."} color={"text-(--text-neutral)"} />
 				</div>
 
-        <div className="flex flex-col w-full justify-evenly gap-16">
-				  <div className="flex flex-row w-[85%] py-4 rounded-xl justify-center bg-gray-100 lg:w-[80%] xl:w-[85%] xl:justify-evenly 2xl:w-[85%]">
+        <div className="flex flex-col w-[80%] lg:w-[70%] justify-evenly gap-16">
+				  <div className="flex flex-row w-[85%] py-4 rounded-xl justify-evenly bg-gray-100 lg:w-[80%] xl:w-[85%] 2xl:w-[85%]">
 				  	<div className="text-center text-lg font-thin text-gray-500">
 				  		<p className="text-2xl xl:text-3xl">9+</p>
 				  		<p className="text-base xl:text-xl">years of service.</p>

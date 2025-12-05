@@ -1,37 +1,25 @@
 import Carousel from "../../components/carousel/carousel";
+import Paragraph from "../../components/text/paragraph";
+import TextHeader from "../../components/text/text-header";
 
 function SpecialOffer() {
 
   return (
     <section className="
     min-h-screen w-full flex flex-col justify-evenly
-    h-full mt-20 justify-items-center content-end"
+    h-full mt-20 items-center content-end"
     >
-      <div>
-        <h1
-          className="
-          text-center 
-          font-(family-name:--font-header)
-          text-[clamp(32px,5vw,48px)]
-          mb-0
-          "
-          >
-          <span className="mr-3">Today</span>
-          <span className="mr-3 text-(--color-green)">Special</span>
-          <span>Offers</span>
-        </h1>
+      <div className="flex flex-col md:w-[60%]">
+        <div className="flex w-3/5 self-center justify-evenly">
+          <TextHeader text={"Todays"} />
+          <TextHeader text={"special"} color={"text-(--color-green)"} />
+          <TextHeader text={"Offer"} />
+        </div>
 
-        <p
-          className="
-          text-center 
-          text-(--text-neutral)
-          text-[clamp(18px,1.8vw+0.5rem,24px)]
-          mb-0
-          "
-          >
-          Best cooks & best delivery guys all at your service. Hot tasty food will
-          reach you now!
-        </p>
+        <Paragraph text={"Best cooks & best delivery guys all at your service. Hot tasty food will reach you now!"} 
+          color={"text-(--text-neutral)"}
+          className={"text-center"}
+        />
       </div>
       <Carousel />
     </section>

@@ -1,5 +1,7 @@
 import { motion, useScroll, useSpring, useTransform } from "motion/react";
 import PrimaryButton from "../primary-button/primary-button";
+import TextHeader from "../text/text-header";
+import Paragraph from "../text/paragraph";
 
 function HeroMobile() {
   const {scrollYProgress} = useScroll()
@@ -11,15 +13,17 @@ function HeroMobile() {
     <div className="flex flex-col justify-between min-h-screen mt-10">
       <div className="flex flex-col flex-1 items-center justify-evenly px-10">
         <div className="text-center">
-          <h1 className="font-(family-name:--font-header) text-4xl mb-2">You're hungry.</h1>
-          <h2 className="font-(family-name:--font-header) text-4xl mb-2">You've Got Taste.</h2>
-          <p className="text-center mx-10">Explore your Taste with special food in the special place.</p>
+          <TextHeader text={"You've Got Questions."} className="mb-3" />
+          <TextHeader text={"You've Got Taste."} className="mb-3" />
+          <Paragraph text={"Explore your Taste with special food in the special place."} color={"text-(--text-neutral)"} />
         </div>
+
         <div className="flex items-center justify-center">
           <PrimaryButton />
           <a className="hidden" href="#menu">Explore Menu</a>
-        </div>
+        </div>        
       </div>
+
       <div className="relative flex flex-2 h-110 justify-center items-center">
         <motion.div
         className="inset-0 z-200 size-50"
