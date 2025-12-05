@@ -45,12 +45,12 @@ function MealCard({title, text, icon, white=false}: MealCardProps) {
       <div>
         <h1
         className="
-        font-(family-name:--font-header) text-xl
+        font-(family-name:--font-header) text-2xl lg:text-3xl
         font-light
         ">
           {title}
         </h1>
-        <p className="m-0.5">{text}</p>
+        <p className="m-0.5 text-base lg:text-lg">{text}</p>
       </div>
     </div>
   );

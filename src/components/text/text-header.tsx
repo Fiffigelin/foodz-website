@@ -9,7 +9,7 @@ function TextHeader({text, color="text-black", className=""}: TextHeaderProps) {
     <h1
     className={`
     font-(family-name:--font-header)
-    text-4xl
+    text-3xl
     md:text-5xl
     lg:text-6xl
     ${color} ${className}`}
