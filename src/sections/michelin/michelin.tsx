@@ -6,7 +6,7 @@ function Michelin() {
   return (
     <section className="
     min-h-screen w-full flex flex-col justify-evenly
-    h-full mt-20 items-center">
+    h-full items-center">
       <div className="flex w-full gap-2 justify-center xl:gap-4">
         <TextHeader text={"19"} />
         <TextHeader text={"Michelin"} color={"text-(--color-green)"} />

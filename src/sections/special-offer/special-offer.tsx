@@ -7,7 +7,7 @@ function SpecialOffer() {
   return (
     <section className="
     min-h-screen w-full flex flex-col justify-evenly
-    h-full mt-20 items-center content-end"
+    h-full items-center content-end"
     >
       <div className="flex flex-col w-full">
         <div className="flex self-center gap-2 xl:gap-4">

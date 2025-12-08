@@ -92,7 +92,7 @@ function Taste() {
   return (
     <section className="
     min-h-screen w-full flex flex-col justify-evenly
-    h-full mt-20 items-center">
+    h-full mt-10 items-center">
       <div className="flex flex-col w-full text-center">
         <TextHeader text={"Get your the best"}/>
         <div className="flex gap-2 justify-center mb-2 xl:gap-4">

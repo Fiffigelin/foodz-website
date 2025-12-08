@@ -7,7 +7,7 @@ function Delicious() {
   return (
     <section className="
     min-h-screen w-full flex flex-col justify-evenly
-    h-full mt-20 items-center">
+    h-full items-center">
       <div className="flex flex-col w-full">
         <TextHeader text={"How We Keep Your"} className={"text-center"}/>
 
