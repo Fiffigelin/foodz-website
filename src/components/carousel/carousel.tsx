@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { dishData } from "../../data/dishes";
+import { mealData } from "../../data/data";
 import Card from "./card";
 import useDevice from "../../hooks/use-device";
 
@@ -9,13 +9,13 @@ export default function InfiniteCarousel() {
   const dragOffset = useRef(0);
   const { isMobile } = useDevice();
   const [current, setCurrent] = useState(0);
-  const total = dishData.length;
+  const total = mealData.length;
   const visibleSlides = isMobile ? 1: 3;
   
   const loopedData = [
-    ...dishData.slice(-visibleSlides),
-    ...dishData,
-    ...dishData.slice(0, visibleSlides),
+    ...mealData.slice(-visibleSlides),
+    ...mealData,
+    ...mealData.slice(0, visibleSlides),
   ];
   const centerIndex = (current + 1 + visibleSlides) % loopedData.length;
 

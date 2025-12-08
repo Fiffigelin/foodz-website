@@ -1,10 +1,10 @@
 import { AiFillFire } from "react-icons/ai";
 import { FaStar, FaStarHalfStroke, FaRegStar } from "react-icons/fa6";
-import { Dish } from "../../data/dishes";
+import { Meal } from "../../data/data";
 import PrimaryButton from "../primary-button/primary-button";
 
 type CardProps = {
-  item: Dish
+  item: Meal
   focus: boolean
   visibleSlides: number
   isMobile: boolean
