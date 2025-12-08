@@ -48,3 +48,9 @@ export default tseslint.config({
   },
 })
 ```
+
+chef: 
+<a href="https://www.freepik.com/free-vector/flat-international-chefs-day-horizontal-banner-template_31151859.htm">Image by freepik</a>
+
+food delivery:
+<a href="https://www.freepik.com/free-vector/safe-food-delivery-landing-page_8247878.htm#from_element=cross_selling__vector">Image by pikisuperstar on Freepik</a>

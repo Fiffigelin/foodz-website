@@ -7,14 +7,16 @@ function Michelin() {
     <section className="
     min-h-screen w-full flex flex-col justify-evenly
     h-full mt-20 items-center">
-      <div className="flex w-full md:w-[60%] justify-evenly">
+      <div className="flex w-full gap-2 justify-center xl:gap-4">
         <TextHeader text={"19"} />
         <TextHeader text={"Michelin"} color={"text-(--color-green)"} />
         <TextHeader text={"Stars Chef"} />
       </div>
 
       <div className="flex justify-between h-full">
-        <img src="49401946_9233345.png" alt="A michelin cook" className="hidden md:flex md:w-1/2 lg:w-1/2 px-6"/>
+        <div className="hidden md:flex w-1/2 self-center justify-center">
+          <img src="31151859_7763286.png" alt="Image by freepik" className="w-3/4"/>
+        </div>
         <div className="flex flex-col w-full h-full text-justify md:w-1/2 px-2 lg:w-1/2 lg:px-6">
           <div className="flex justify-start mt-8 md:justify-between text-(--color-green) font-semibold md:my-3">
             <h2 className="text-xl md:text-base xl:text-xl">Alain Ducasse - 19 Michelin Stars</h2>

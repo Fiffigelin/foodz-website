@@ -93,13 +93,13 @@ function Taste() {
     <section className="
     min-h-screen w-full flex flex-col justify-evenly
     h-full mt-20 items-center">
-      <div className="flex flex-col w-full text-center md:w-[60%]">
+      <div className="flex flex-col w-full text-center">
         <TextHeader text={"Get your the best"}/>
-        <div className="flex gap-2 justify-center mb-2">
+        <div className="flex gap-2 justify-center mb-2 xl:gap-4">
           <TextHeader text={"Taste"}/>
           <TextHeader text={"Now!"} color={"text-(--color-green)"}/>
         </div>
-        <Paragraph className="text-lg" text={"Best cooks & best delivery guys all at your service. Hot tasty food will reach you now in 30 minutes!"} color={"text-(--color-neutral)"}/>
+        <Paragraph className="text-lg w-[60%] self-center" text={"Best cooks & best delivery guys all at your service. Hot tasty food will reach you now in 30 minutes!"} color={"text-(--color-neutral)"}/>
       </div>
 
       <div className="flex my-4 w-full md:flex-row md:gap-2 lg:gap-4">
@@ -144,7 +144,7 @@ function Taste() {
         </div>
 
         <div className="hidden lg:flex w-1/2 self-center justify-center">
-          <img src="8247878_3870403.png" alt="A michelin cook" className="w-2/3"/>
+          <img src="8247878_3870403.png" alt="Image by pikisuperstar on Freepik" className="w-2/3"/>
         </div>
       </div>
     </section>

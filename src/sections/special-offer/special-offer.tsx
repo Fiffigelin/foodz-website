@@ -9,8 +9,8 @@ function SpecialOffer() {
     min-h-screen w-full flex flex-col justify-evenly
     h-full mt-20 items-center content-end"
     >
-      <div className="flex flex-col md:w-[55%] lg:w-[55%]">
-        <div className="flex w-full self-center justify-evenly">
+      <div className="flex flex-col w-full">
+        <div className="flex self-center gap-2 xl:gap-4">
           <TextHeader text={"Todays"} />
           <TextHeader text={"special"} color={"text-(--color-green)"} />
           <TextHeader text={"Offer"} />

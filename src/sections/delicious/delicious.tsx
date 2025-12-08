@@ -8,10 +8,10 @@ function Delicious() {
     <section className="
     min-h-screen w-full flex flex-col justify-evenly
     h-full mt-20 items-center">
-      <div className="flex flex-col w-full md:w-[60%]">
+      <div className="flex flex-col w-full">
         <TextHeader text={"How We Keep Your"} className={"text-center"}/>
 
-        <div className="flex gap-3 justify-center md:gap-4">
+        <div className="flex gap-2 justify-center xl:gap-4">
           <TextHeader text={"Meal"} className={"my-3 lg:my-6 2xl:my-8"} />
           <TextHeader text={"Delicious"} color={"text-(--color-green)"} className={"my-3 lg:my-6 2xl:my-8"} />
         </div>
