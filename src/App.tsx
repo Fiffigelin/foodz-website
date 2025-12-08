@@ -3,6 +3,7 @@ import Hero from "./sections/hero/hero";
 import SpecialOffer from "./sections/special-offer/special-offer"
 import Michelin from "./sections/michelin/michelin";
 import Delicious from "./sections/delicious/delicious";
+import Taste from "./sections/taste/taste";
 
 function App() {
 
@@ -14,7 +15,7 @@ function App() {
         <SpecialOffer />
         <Michelin />
 				<Delicious />
-        <section className="min-h-screen "/>
+        <Taste />
         <section className="min-h-screen "/>
 			</div>
     </>
