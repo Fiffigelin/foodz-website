@@ -13,7 +13,7 @@ function TextInput({ id, label, placeholder, value, onChange }: InputProps) {
   
   return (
     <div className="relative w-full">
-      <p className="text-lg">{label}</p>
+      <p className="block mb-1 text-lg">{label}</p>
       <div
         className={`flex w-full items-center justify-between rounded bg-white p-2 ring-1 ${
           focused ? "ring-green-500" : "ring-gray-300"

@@ -59,12 +59,12 @@ function PhoneInput({
         <button
           id={id}
           onClick={() => setOpen(prev => !prev)}
-          className={`ring-1 rounded-l h-11 p-2 w-[75px] flex justify-between items-center ${open || focused ? "ring-green-500" : "ring-gray-300"}`}
+          className={`ring-1 rounded-l h-11 p-2 min-w-[65px] flex justify-between items-center ${open || focused ? "ring-green-500" : "ring-gray-300"}`}
         >
-          <span className="min-w-4 text-left">{isoCode || ""}</span>
+          <span className="min-w-4 text-left text-sm font-thin">{isoCode || ""}</span>
           {open 
-              ? <RiArrowUpSLine className="text-xl" size={24} /> 
-              : <RiArrowDownSLine className="text-xl" size={24} />}
+              ? <RiArrowUpSLine size={20} /> 
+              : <RiArrowDownSLine size={20} />}
         </button>
 
         <p className="p-2 text-gray-400 text-lg">
@@ -83,7 +83,7 @@ function PhoneInput({
       </div>
 
       {open && (
-        <ul className="absolute z-20 mt-1 w-16 rounded bg-gray-50 ring-1 ring-gray-300 max-h-60 overflow-y-auto scroll-smooth">
+        <ul className="absolute z-20 mt-1 min-w-[65px] rounded bg-gray-50 ring-1 ring-gray-300 max-h-60 overflow-y-auto scroll-smooth">
           {items.map((item) => (
             <li
               key={item.id}

@@ -77,8 +77,12 @@ function Taste() {
     const selectedMeals = mealData.filter(m => selectedItems.some(item => item.id === m.id));
     handleForm("meals", selectedMeals);
 
-    const totalCost = selectedMeals.reduce((sum, meal) => sum + meal.cost, 2);
-    handleForm("cost", totalCost);
+    if (selectedMeals.length < 1) {
+      handleForm("cost", 0.00);
+    } else {
+      const totalCost = selectedMeals.reduce((sum, meal) => sum + meal.cost, 0);
+      handleForm("cost", totalCost);
+    }
   }, [handleForm]);
   
   const handlePayments = useCallback((item: SingleSelectItem | null) => {
@@ -98,8 +102,8 @@ function Taste() {
         <Paragraph className="text-lg" text={"Best cooks & best delivery guys all at your service. Hot tasty food will reach you now in 30 minutes!"} color={"text-(--color-neutral)"}/>
       </div>
 
-      <div className="flex my-4 w-full md:w-1/2">
-        <div className="flex flex-col gap-3 w-full">
+      <div className="flex my-4 w-full md:flex-row md:gap-2 lg:gap-4">
+        <div className="flex flex-col gap-3 w-full flex-start lg:w-1/2">
             <p className="text-xl">What's Your Taste?</p>
             <p className="text-lg">Fill the form and let us know your taste.</p>
 
@@ -115,7 +119,7 @@ function Taste() {
             onChange={handleMeals}
           />
 
-          <div className="flex flex-col gap-2 md:flex-row">
+          <div className="flex flex-col gap-2 lg:flex-row">
             <TextInput id={"name"} label={"Name"} placeholder="Name" onChange={(value) => {handleForm("name", value)}} value={inputData.name}/>
             <PhoneInput id={"telephone"} label={"Telephone"} items={countryCodes} placeholder="123 456 789" onChange={(value) => {handleForm("telephone", value)}} value={inputData.telephone}/>
           </div>
@@ -126,6 +130,7 @@ function Taste() {
             onChange={handlePayments}
             placeholder="Select Payment"
             label="Payment"
+            className="lg:w-1/2"
             value={Payment.find(p => p.name === inputData.payment) || { id: -1, name: "" }}
           />
 
@@ -138,8 +143,8 @@ function Taste() {
           <PrimaryButton />
         </div>
 
-        <div>
-          <img src="49401946_9233345.png" alt="A michelin cook" className="hidden md:flex md:w-1/2 lg:w-1/2 px-6"/>
+        <div className="hidden lg:flex w-1/2 self-center justify-center">
+          <img src="8247878_3870403.png" alt="A michelin cook" className="w-2/3"/>
         </div>
       </div>
     </section>

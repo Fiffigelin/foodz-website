@@ -12,7 +12,7 @@ function MultiPill({item, onDelete, icon}: PillProps) {
     const getIcon = (type: string | undefined): JSX.Element | null => {
       switch(type) {
         case "Food":
-          return <PiBowlFood className="w-3 h-3 md:w-4 md:h-4 lg:w-10 lg:h-10" />
+          return <PiBowlFood className="w-3 h-3 md:w-4 lg:w-4 lg:h-4" />
         
         default:
           return null
@@ -27,7 +27,7 @@ function MultiPill({item, onDelete, icon}: PillProps) {
       {getIcon(icon)}
       {item.name}
       <button onClick={() => onDelete(item)} className="font-bold cursor-pointer">
-        <MdClose className="w-3 h-3 md:w-4 md:h-4 lg:w-10 lg:h-10" />
+        <MdClose className="w-3 h-3 lg:w-4 lg:h-4" />
       </button>
     </div>
   );

@@ -93,6 +93,7 @@ type SingleSelectProps = {
   placeholder: string;
   items: SingleSelectItem[];
   value: SingleSelectItem;
+  className?: string;
   onChange: (value: SingleSelectItem | null) => void;
 };
 
@@ -102,10 +103,24 @@ function SingleSelect({
   placeholder,
   items,
   value,
+  className = "",
   onChange
 }: SingleSelectProps) {
   const [open, setOpen] = useState(false);
   const wrapperRef = useRef<HTMLDivElement>(null);
+
+  const applyWidth = (className: string = "") => {
+    const width = className.split(" ").find(c => c.startsWith("w-"));
+
+    const cleaned = className
+      .split(" ")
+      .filter(c => !c.startsWith("w-"))
+      .join(" ");
+
+    return `${cleaned} ${width ?? "w-full"}`.trim();
+  }
+
+  const finalClass = applyWidth(className);
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -127,7 +142,7 @@ function SingleSelect({
   };
 
   return (
-    <div ref={wrapperRef} className="relative w-full">
+    <div ref={wrapperRef} className={`relative ${finalClass}`}>
       {label && <label htmlFor={id} className="block mb-1 text-lg">{label}</label>}
 
       <button
