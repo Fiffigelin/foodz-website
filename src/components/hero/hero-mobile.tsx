@@ -15,7 +15,7 @@ function HeroMobile() {
         <div className="text-center">
           <TextHeader text={"You've Got Questions."} className="mb-3" />
           <TextHeader text={"You've Got Taste."} className="mb-3" />
-          <Paragraph text={"Explore your Taste with special food in the special place."} color={"text-(--text-neutral)"} />
+          <Paragraph text={"Explore your Taste with special food in the special place."} color={"text-(--color-neutral)"} />
         </div>
 
         <div className="flex items-center justify-center">

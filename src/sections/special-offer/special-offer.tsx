@@ -17,7 +17,7 @@ function SpecialOffer() {
         </div>
 
         <Paragraph text={"Best cooks & best delivery guys all at your service. Hot tasty food will reach you now!"} 
-          color={"text-(--text-neutral)"}
+          color={"text-(--color-neutral)"}
           className={"text-center"}
         />
       </div>

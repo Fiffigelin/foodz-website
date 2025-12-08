@@ -5,7 +5,8 @@
   --hero-img: url("/hero-ramen.png");
   --font-header: "Alice", sans-serif;
   --color-background: #fcfcfd;
-  --text-neutral: #777e90;
+  --color-neutral: #777e90;
+  --color-light_neutral: #d1d5dc;
   --navtext-hover: #575c69;
 
   --color-light_green: #ddf3d8;

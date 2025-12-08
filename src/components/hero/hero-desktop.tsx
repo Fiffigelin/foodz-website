@@ -16,7 +16,7 @@ function HeroDesktop() {
 				<div className="flex flex-col max-w-[90%] justify-evenly">
           <TextHeader text={"You've Got Questions."} className="mb-3 lg:mb-6 2xl:mb-8" />
           <TextHeader text={"You've Got Taste."} className="mb-3 lg:mb-6 2xl:mb-8" />
-          <Paragraph text={"Explore your Taste with special food in the special place."} color={"text-(--text-neutral)"} />
+          <Paragraph text={"Explore your Taste with special food in the special place."} color={"text-(--color-neutral)"} />
 				</div>
 
         <div className="flex flex-col w-[80%] lg:w-[70%] justify-evenly gap-16">
