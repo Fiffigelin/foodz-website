@@ -29,7 +29,7 @@ export default tseslint.config(
         'warn',
         { allowConstantExport: true },
       ],
-      'no-unused-vars': 'error',
+  '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
       'react-hooks/exhaustive-deps': 'error',
       '@typescript-eslint/no-explicit-any': 'error',
       '@typescript-eslint/no-non-null-assertion': 'off',
