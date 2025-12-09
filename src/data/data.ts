@@ -15,6 +15,16 @@ export interface CountryCode {
 	isoCode: string;
 }
 
+export interface Content {
+  name: string,
+  uri: string
+}
+
+export interface FooterContent {
+  section: string,
+  contents: Content[],
+}
+
 export const mealData: Meal[] = [
 	{
 		id: 0,
@@ -225,5 +235,63 @@ export const countryCodes: CountryCode[] = [
   { id: 14, code: "+32", country: "Belgium", isoCode: "BE" },
   { id: 15, code: "+36", country: "Hungary", isoCode: "HU" }
 ];
+
+export const footerContents: FooterContent[] = [
+  {
+    section: "Support",
+    contents: [
+      {
+        name: "Help Centre",
+        uri: ""
+      },
+      {
+        name: "Safety information",
+        uri: ""
+      },
+      {
+        name: "Cancellation optioms",
+        uri: ""
+      },
+      {
+        name: "Report Complaint",
+        uri: ""
+      }
+    ]
+  },
+  {
+    section: "Community",
+    contents: [
+      {
+        name: "Customer Review",
+        uri: ""
+      },
+      {
+        name: "Newsletter",
+        uri: ""
+      }
+    ]
+  }, 
+  {
+    section: "About",
+    contents: [
+      {
+        name: "Our Chef",
+        uri: ""
+      },
+      {
+        name: "Careers",
+        uri: ""
+      },
+      {
+        name: "Blog",
+        uri: ""
+      },
+      {
+        name: "Contact",
+        uri: ""
+      }
+    ]
+  },
+]
 
 

@@ -4,6 +4,7 @@ import SpecialOffer from "./sections/special-offer/special-offer"
 import Michelin from "./sections/michelin/michelin";
 import Delicious from "./sections/delicious/delicious";
 import Taste from "./sections/taste/taste";
+import Footer from "./sections/footer/footer";
 
 function App() {
 
@@ -16,8 +17,8 @@ function App() {
         <Michelin />
 				<Delicious />
         <Taste />
-        <section className="min-h-screen "/>
 			</div>
+      <Footer />
     </>
   )
 }
