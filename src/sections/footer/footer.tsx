@@ -21,7 +21,7 @@ function Footer() {
       </div>
 
       {/* Tablet & Desktop */}
-      <div className="sm:hidden md:flex w-full justify-evenly px-2 py-4 my-10 gap-10 lg:gap-22 xl:gap-35">
+      <div className="hidden md:flex w-full justify-evenly px-2 py-4 my-10 gap-10 lg:gap-22 xl:gap-35">
           <div className="flex flex-col w-1/2">
             <img src="/foodz.png" className="w-38 self-center mb-4"/>
             <Paragraph text="Explore your Taste with special food in the special place, that will make you happy. I try to write some thing without lorem isum." color="text-(--color-neutral)" className="text-center" />
