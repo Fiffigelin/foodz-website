@@ -99,7 +99,7 @@ function Taste() {
           <TextHeader text={"Taste"}/>
           <TextHeader text={"Now!"} color={"text-(--color-green)"}/>
         </div>
-        <Paragraph className="text-lg w-[60%] self-center" text={"Best cooks & best delivery guys all at your service. Hot tasty food will reach you now in 30 minutes!"} color={"text-(--color-neutral)"}/>
+        <Paragraph className="text-lg w-full md:w-[60%] self-center" text={"Best cooks & best delivery guys all at your service. Hot tasty food will reach you now in 30 minutes!"} color={"text-(--color-neutral)"}/>
       </div>
 
       <div className="flex my-4 w-full md:flex-row md:gap-2 lg:gap-4">
